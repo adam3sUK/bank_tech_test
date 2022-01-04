@@ -23,5 +23,4 @@ describe AccountHistory do
       expect(@account_history.history[0][:amount]).to be(500.00)
     end
   end
-
 end
