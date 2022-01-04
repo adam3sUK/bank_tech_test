@@ -2,10 +2,10 @@ require 'account'
 
 describe Account do
   before(:each) do
-    @account = Account.create
+    @account = Account.new
   end
 
-  describe '.create' do
+  describe '.new' do
     it 'creates a new Account instance' do
       expect(@account).to be_an_instance_of(Account)
     end
@@ -22,12 +22,24 @@ describe Account do
       @account.deposit(500)
       expect(@account.balance).to be(500.00)
     end
+    it 'allows for multiple deposits on the same account' do
+      @account.deposit(500)
+      @account.deposit(500)
+      expect(@account.balance).to be(1000.00)
+    end
   end
 
   describe '.withdraw' do
     it 'decreases the account balance by the amount withdrawn' do
       @account.withdraw(500)
       expect(@account.balance).to be(-500.00)
+    end
+    it 'allows for multiple withdraws on the same account' do
+      @account.deposit(2000)
+      expect(@account.balance).to be(2000.00)
+      @account.withdraw(500)
+      @account.withdraw(500)
+      expect(@account.balance).to be(1000.00)
     end
   end
 end
