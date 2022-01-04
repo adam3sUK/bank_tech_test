@@ -12,4 +12,8 @@ class Account
   def deposit(amount)
     @balance += amount.to_f
   end
+
+  def withdraw(amount)
+    @balance -= amount.to_f
+  end
 end

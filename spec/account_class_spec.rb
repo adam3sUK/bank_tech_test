@@ -7,7 +7,7 @@ describe Account do
 
   describe '.create' do
     it 'creates a new Account instance' do
-			expect(@account).to be_an_instance_of(Account)
+      expect(@account).to be_an_instance_of(Account)
     end
   end
 
@@ -18,9 +18,16 @@ describe Account do
   end
 
   describe '.deposit' do
-    it 'increases the balance by the amount deposited' do
+    it 'increases the account balance by the amount deposited' do
       @account.deposit(500)
       expect(@account.balance).to be(500.00)
+    end
+  end
+
+  describe '.withdraw' do
+    it 'decreases the account balance by the amount withdrawn' do
+      @account.withdraw(500)
+      expect(@account.balance).to be(-500.00)
     end
   end
 end
