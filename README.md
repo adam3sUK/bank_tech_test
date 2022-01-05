@@ -7,7 +7,7 @@ The application has been built using Ruby, which was chosen because:
 
 The app was built with a TDD approach throughout to ensure all parts were working as intended, testing was done using RSpec, with coverage examined using simplecov.
 
-To keep the code clean rubocop has been used throughout, the code has also been refactored following passing tests to keep everything small. The single-responsibility principle has been used also to keep single class sizes to a minimal.
+To keep the code clean rubocop was been used throughout, the code has also been refactored following passing tests to keep everything small. The single-responsibility principle has been used also to keep class sizes to a minimal.
 
 ### To run locally:
 `git clone git@github.com/adam3sUK/bank_tech_test.git`  
