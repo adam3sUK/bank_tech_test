@@ -24,6 +24,6 @@ class Account
   private
 
   def correct_format?(amount)
-    fail "Please enter a numerical value" if !(amount.is_a?(Integer) || amount.is_a?(Float))
+    raise 'Please enter a numerical value' unless amount.is_a?(Integer) || amount.is_a?(Float)
   end
 end

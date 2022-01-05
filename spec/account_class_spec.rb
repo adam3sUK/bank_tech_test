@@ -27,8 +27,8 @@ describe Account do
       @account.deposit(500)
       expect(@account.balance).to be(1000.00)
     end
-    it "raises an error if incorrect format provided" do
-      expect { @account.deposit("One Hundred") }.to raise_error "Please enter a numerical value"
+    it 'raises an error if incorrect format provided' do
+      expect { @account.deposit('One Hundred') }.to raise_error 'Please enter a numerical value'
     end
   end
 
@@ -44,8 +44,8 @@ describe Account do
       @account.withdraw(500)
       expect(@account.balance).to be(1000.00)
     end
-    it "raises an error if incorrect format provided" do
-      expect { @account.withdraw("One Hundred") }.to raise_error "Please enter a numerical value"
+    it 'raises an error if incorrect format provided' do
+      expect { @account.withdraw('One Hundred') }.to raise_error 'Please enter a numerical value'
     end
   end
 end
