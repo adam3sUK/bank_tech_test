@@ -1,4 +1,5 @@
 require './lib/account_history'
+require './lib/print_statement'
 
 # Account class for seeing and editing balance
 class Account
@@ -19,6 +20,10 @@ class Account
     correct_format?(amount)
     @balance -= amount.to_f
     @history.add(amount.to_f, @balance, 'withdraw')
+  end
+
+  def print
+    PrintStatement.new(@history).print
   end
 
   private

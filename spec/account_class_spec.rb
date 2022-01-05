@@ -48,4 +48,15 @@ describe Account do
       expect { @account.withdraw('One Hundred') }.to raise_error 'Please enter a numerical value'
     end
   end
+
+  describe '.print' do
+    it 'calls the print method on a new instance of the PrintStatement class' do
+      @account.deposit(500)
+      @account.withdraw(500)
+      time = Time.new.strftime('%d/%m/%Y')
+      expect { @account.print }.to output(a_string_including('date || credit || debit || balance')).to_stdout
+      expect { @account.print }.to output(a_string_including("#{time} || 500.00 || || 500.00")).to_stdout
+      expect { @account.print }.to output(a_string_including("#{time} || || 500.00 || 0.00")).to_stdout
+    end
+  end
 end

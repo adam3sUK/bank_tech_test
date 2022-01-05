@@ -21,6 +21,7 @@ describe AccountHistory do
     it 'adds a hash of values to the history array' do
       @account_history.add(500.00, 1200.00, 'deposit')
       expect(@account_history.history[0][:amount]).eql?('500.00')
+      expect(@account_history.history[0][:date]).eql?(Time.new.strftime('%d/%m/%Y'))
     end
   end
 end
