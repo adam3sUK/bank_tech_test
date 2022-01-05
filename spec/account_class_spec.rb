@@ -39,7 +39,6 @@ describe Account do
     end
     it 'allows for multiple withdraws on the same account' do
       @account.deposit(2000)
-      expect(@account.balance).to be(2000.00)
       @account.withdraw(500)
       @account.withdraw(500)
       expect(@account.balance).to be(1000.00)
