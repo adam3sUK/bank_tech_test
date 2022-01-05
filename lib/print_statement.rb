@@ -4,6 +4,13 @@ class PrintStatement
     @account_history = account_history
   end
 
+  def print
+    print_header
+    print_body
+  end
+
+  private
+
   def print_header
     puts 'date || credit || debit || balance'
   end

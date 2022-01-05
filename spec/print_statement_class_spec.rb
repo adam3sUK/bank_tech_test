@@ -31,19 +31,16 @@ describe PrintStatement do
     end
   end
 
-  describe '.print_header' do
+  describe '.print' do
     it 'prints the header of the statement' do
-      expect { @statement.print_header }.to output(a_string_including('date || credit || debit || balance')).to_stdout
+      expect { @statement.print }.to output(a_string_including('date || credit || debit || balance')).to_stdout
     end
-  end
-
-  describe '.print_body' do
     it 'prints the body of the statement' do
-      expect { @statement.print_body }.to output(a_string_including('03/01/2022 || 200.00 || || 200.00')).to_stdout
+      expect { @statement.print }.to output(a_string_including('03/01/2022 || 200.00 || || 200.00')).to_stdout
     end
     it 'alters format for withdraws' do
       alt_statement = PrintStatement.new(history_withdraw)
-      expect { alt_statement.print_body }.to output(a_string_including('05/01/2022 || || 300.00 || -100.00')).to_stdout
+      expect { alt_statement.print }.to output(a_string_including('05/01/2022 || || 300.00 || -100.00')).to_stdout
     end
   end
 end
