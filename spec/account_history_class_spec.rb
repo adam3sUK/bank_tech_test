@@ -20,7 +20,7 @@ describe AccountHistory do
   describe '.add' do
     it 'adds a hash of values to the history array' do
       @account_history.add(500.00, 1200.00, 'deposit')
-      expect(@account_history.history[0][:amount]).to be(500.00)
+      expect(@account_history.history[0][:amount]).eql?('500.00')
     end
   end
 end
