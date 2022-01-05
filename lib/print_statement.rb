@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-# Prints a record to the terminal showings the accounts transactional history
+# Prints a record to the terminal showing the accounts transactional history
 class PrintStatement
   def initialize(account_history)
     @account_history = account_history
