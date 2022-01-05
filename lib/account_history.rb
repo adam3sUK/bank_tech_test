@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # Records a history of an accounts deposits and withdraws
 class AccountHistory
   attr_reader :history

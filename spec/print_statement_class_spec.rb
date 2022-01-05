@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require './lib/print_statement'
 
 describe PrintStatement do

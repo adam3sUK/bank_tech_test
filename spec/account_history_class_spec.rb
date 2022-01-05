@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'account_history'
 
 describe AccountHistory do

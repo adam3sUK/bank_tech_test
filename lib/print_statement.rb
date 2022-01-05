@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # Prints a record to the terminal showings the accounts transactional history
 class PrintStatement
   def initialize(account_history)
