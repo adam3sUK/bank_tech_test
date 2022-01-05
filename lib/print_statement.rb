@@ -10,7 +10,11 @@ class PrintStatement
 
   def print_body
     @account_history.history.each do |transaction|
-      puts "#{transaction[:date]} || #{transaction[:amount]} || || #{transaction[:balance]}"
+      if transaction[:type] == 'deposit'
+        puts "#{transaction[:date]} || #{transaction[:amount]} || || #{transaction[:balance]}"
+      else
+        puts "#{transaction[:date]} || || #{transaction[:amount]} || #{transaction[:balance]}"
+      end
     end
   end
 end

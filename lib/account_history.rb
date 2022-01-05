@@ -8,7 +8,7 @@ class AccountHistory
 
   def add(amount, balance, transaction_type)
     @history.push(
-      { date: Time.new.strftime('%d/%m/%Y'), amount: sprintf('%.2f', amount), balance: sprintf('%.2f', balance), type: transaction_type }
+      { date: Time.new.strftime('%d/%m/%Y'), amount: format('%.2f', amount), balance: format('%.2f', balance), type: transaction_type }
     )
   end
 end
